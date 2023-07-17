@@ -1,0 +1,5 @@
+(() => {
+    const flags = Vencord.Webpack.findByProps("ACTIVE_DEVELOPER", "PARTNER", "MFA_SMS");
+    const allFlags = ["ACTIVE_DEVELOPER", "BUG_HUNTER_LEVEL_1", "BUG_HUNTER_LEVEL_2", "CERTIFIED_MODERATOR", "HYPESQUAD", "HYPESQUAD_ONLINE_HOUSE_1", "HYPESQUAD_ONLINE_HOUSE_2", "HYPESQUAD_ONLINE_HOUSE_3", "PARTNER", "STAFF", "PREMIUM_EARLY_SUPPORTER", "VERIFIED_DEVELOPER"].reduce((acc, curr) => acc + flags[curr], 0);
+    Vencord.Webpack.Common.UserStore.getCurrentUser().flags = allFlags;
+})()

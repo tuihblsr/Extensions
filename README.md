@@ -1,2 +1,1 @@
-# Vencord
-My Vencord Themes
+# My Chrome Extensions
